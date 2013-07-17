@@ -18,6 +18,6 @@ It is easy to use.
 * For request local cache ,you should get the file URL.
 * For cache ,you just pass the url of the image the KNImageCache
 
-`- (BOOL)hasImageForPath:(NSString *)aPath;`
-`- (NSURL *)imageURLforPath:(NSString *)aPath;`
-`- (BOOL)storeImage:(UIImage *)aImage imagePath:(NSString *)aPath;`
+ - (BOOL)hasImageForPath:(NSString *)aPath;
+ - (NSURL *)imageURLforPath:(NSString *)aPath;
+ - (BOOL)storeImage:(UIImage *)aImage imagePath:(NSString *)aPath;
