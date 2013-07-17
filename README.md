@@ -9,7 +9,7 @@ Unlike other cache ,KNImageCache only caches the image's key not the image data 
 cached on disk,you can get the file path and request the image with the framework .
 
  ARC Compatibility
- ===================
+===================
  * KNImageCache support ARC,
  
 Usage 
@@ -18,6 +18,6 @@ It is easy to use.
 * For request local cache ,you should get the file URL.
 * For cache ,you just pass the url of the image the KNImageCache
 
- - (BOOL)hasImageForPath:(NSString *)aPath;
- - (NSURL *)imageURLforPath:(NSString *)aPath;
- - (BOOL)storeImage:(UIImage *)aImage imagePath:(NSString *)aPath;
+    - (BOOL)hasImageForPath:(NSString *)aPath;
+    - (NSURL *)imageURLforPath:(NSString *)aPath;
+    - (BOOL)storeImage:(UIImage *)aImage imagePath:(NSString *)aPath;
