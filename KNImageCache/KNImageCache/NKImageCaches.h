@@ -2,8 +2,8 @@
 //  NKImageCaches.h
 //  EReader
 //
-//  Created by Lizhang Dong on 13-7-17.
-//  Copyright (c) 2013年 along. All rights reserved.
+//  Created by Niko on 13-7-17.
+//  Copyright (c) 2013年 NK. All rights reserved.
 //
 
 /**

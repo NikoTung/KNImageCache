@@ -2,8 +2,8 @@
 //  NKImageCaches.m
 //  EReader
 //
-//  Created by Lizhang Dong on 13-7-17.
-//  Copyright (c) 2013年 along. All rights reserved.
+//  Created by Niko on 13-7-17.
+//  Copyright (c) 2013年 NK. All rights reserved.
 //
 
 
@@ -117,7 +117,6 @@ static        NSString* kDefaultCacheName       = @"DownloadedBookCover";
     BOOL result =[fm createFileAtPath:filePath contents:aData attributes:nil];
     if (result) {
         [_cacheList addObject:key];
-        NSLog(@"store success");
         _totalCachesCount = [_cacheList count];
     }
     return result;
@@ -212,7 +211,7 @@ static        NSString* kDefaultCacheName       = @"DownloadedBookCover";
 }
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
+
 + (NSString*)cachePathWithName:(NSString*)name {
 	NSArray* paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
 	NSString* cachesPath = [paths objectAtIndex:0];
@@ -221,7 +220,6 @@ static        NSString* kDefaultCacheName       = @"DownloadedBookCover";
 	[self createPathIfNecessary:cachesPath];
 	[self createPathIfNecessary:cachePath];
 	
-    NSLog(@"ffff %@",cachePath);
     
 	return cachePath;
 }
