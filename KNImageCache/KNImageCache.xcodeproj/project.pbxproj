@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1319D54B1798DD0800030B02 /* NKImageCaches.m in Sources */ = {isa = PBXBuildFile; fileRef = 1392DB481796A8DD00CF98BD /* NKImageCaches.m */; };
+		1319D54F1798DEAC00030B02 /* NKImageCaches.m in Sources */ = {isa = PBXBuildFile; fileRef = 1392DB481796A8DD00CF98BD /* NKImageCaches.m */; };
 		1392DB131796A8AF00CF98BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1392DB121796A8AF00CF98BD /* UIKit.framework */; };
 		1392DB151796A8AF00CF98BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1392DB141796A8AF00CF98BD /* Foundation.framework */; };
 		1392DB171796A8AF00CF98BD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1392DB161796A8AF00CF98BD /* CoreGraphics.framework */; };
@@ -21,9 +23,21 @@
 		1392DB331796A8B000CF98BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1392DB141796A8AF00CF98BD /* Foundation.framework */; };
 		1392DB3B1796A8B000CF98BD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1392DB391796A8B000CF98BD /* InfoPlist.strings */; };
 		1392DB3E1796A8B000CF98BD /* KNImageCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1392DB3D1796A8B000CF98BD /* KNImageCacheTests.m */; };
+		13F886B81797B19400BC1285 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1392DB301796A8B000CF98BD /* SenTestingKit.framework */; };
+		13F886B91797B19400BC1285 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1392DB121796A8AF00CF98BD /* UIKit.framework */; };
+		13F886BA1797B19400BC1285 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1392DB141796A8AF00CF98BD /* Foundation.framework */; };
+		13F886C01797B19400BC1285 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13F886BE1797B19400BC1285 /* InfoPlist.strings */; };
+		13F886C31797B19400BC1285 /* KNImageCacheLogicTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F886C21797B19400BC1285 /* KNImageCacheLogicTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1319D54D1798DE9600030B02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1392DB051796A8AF00CF98BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1392DB0D1796A8AF00CF98BD;
+			remoteInfo = KNImageCache;
+		};
 		1392DB341796A8B000CF98BD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1392DB051796A8AF00CF98BD /* Project object */;
@@ -53,6 +67,14 @@
 		1392DB3A1796A8B000CF98BD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1392DB3C1796A8B000CF98BD /* KNImageCacheTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KNImageCacheTests.h; sourceTree = "<group>"; };
 		1392DB3D1796A8B000CF98BD /* KNImageCacheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNImageCacheTests.m; sourceTree = "<group>"; };
+		1392DB471796A8DD00CF98BD /* NKImageCaches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKImageCaches.h; sourceTree = "<group>"; };
+		1392DB481796A8DD00CF98BD /* NKImageCaches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKImageCaches.m; sourceTree = "<group>"; };
+		13F886B71797B19400BC1285 /* KNImageCacheLogicTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KNImageCacheLogicTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13F886BD1797B19400BC1285 /* KNImageCacheLogicTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KNImageCacheLogicTest-Info.plist"; sourceTree = "<group>"; };
+		13F886BF1797B19400BC1285 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		13F886C11797B19400BC1285 /* KNImageCacheLogicTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KNImageCacheLogicTest.h; sourceTree = "<group>"; };
+		13F886C21797B19400BC1285 /* KNImageCacheLogicTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KNImageCacheLogicTest.m; sourceTree = "<group>"; };
+		13F886C41797B19400BC1285 /* KNImageCacheLogicTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KNImageCacheLogicTest-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +98,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		13F886B31797B19400BC1285 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13F886B81797B19400BC1285 /* SenTestingKit.framework in Frameworks */,
+				13F886B91797B19400BC1285 /* UIKit.framework in Frameworks */,
+				13F886BA1797B19400BC1285 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -84,6 +116,7 @@
 			children = (
 				1392DB181796A8AF00CF98BD /* KNImageCache */,
 				1392DB361796A8B000CF98BD /* KNImageCacheTests */,
+				13F886BB1797B19400BC1285 /* KNImageCacheLogicTest */,
 				1392DB111796A8AF00CF98BD /* Frameworks */,
 				1392DB0F1796A8AF00CF98BD /* Products */,
 			);
@@ -94,6 +127,7 @@
 			children = (
 				1392DB0E1796A8AF00CF98BD /* KNImageCache.app */,
 				1392DB2F1796A8B000CF98BD /* KNImageCacheTests.octest */,
+				13F886B71797B19400BC1285 /* KNImageCacheLogicTest.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +146,8 @@
 		1392DB181796A8AF00CF98BD /* KNImageCache */ = {
 			isa = PBXGroup;
 			children = (
+				1392DB471796A8DD00CF98BD /* NKImageCaches.h */,
+				1392DB481796A8DD00CF98BD /* NKImageCaches.m */,
 				1392DB211796A8AF00CF98BD /* AppDelegate.h */,
 				1392DB221796A8AF00CF98BD /* AppDelegate.m */,
 				1392DB191796A8AF00CF98BD /* Supporting Files */,
@@ -148,6 +184,26 @@
 			children = (
 				1392DB381796A8B000CF98BD /* KNImageCacheTests-Info.plist */,
 				1392DB391796A8B000CF98BD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13F886BB1797B19400BC1285 /* KNImageCacheLogicTest */ = {
+			isa = PBXGroup;
+			children = (
+				13F886C11797B19400BC1285 /* KNImageCacheLogicTest.h */,
+				13F886C21797B19400BC1285 /* KNImageCacheLogicTest.m */,
+				13F886BC1797B19400BC1285 /* Supporting Files */,
+			);
+			path = KNImageCacheLogicTest;
+			sourceTree = "<group>";
+		};
+		13F886BC1797B19400BC1285 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				13F886BD1797B19400BC1285 /* KNImageCacheLogicTest-Info.plist */,
+				13F886BE1797B19400BC1285 /* InfoPlist.strings */,
+				13F886C41797B19400BC1285 /* KNImageCacheLogicTest-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -191,6 +247,25 @@
 			productReference = 1392DB2F1796A8B000CF98BD /* KNImageCacheTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		13F886B61797B19400BC1285 /* KNImageCacheLogicTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13F886C71797B19400BC1285 /* Build configuration list for PBXNativeTarget "KNImageCacheLogicTest" */;
+			buildPhases = (
+				13F886B21797B19400BC1285 /* Sources */,
+				13F886B31797B19400BC1285 /* Frameworks */,
+				13F886B41797B19400BC1285 /* Resources */,
+				13F886B51797B19400BC1285 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1319D54E1798DE9600030B02 /* PBXTargetDependency */,
+			);
+			name = KNImageCacheLogicTest;
+			productName = KNImageCacheLogicTest;
+			productReference = 13F886B71797B19400BC1285 /* KNImageCacheLogicTest.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -214,6 +289,7 @@
 			targets = (
 				1392DB0D1796A8AF00CF98BD /* KNImageCache */,
 				1392DB2E1796A8B000CF98BD /* KNImageCacheTests */,
+				13F886B61797B19400BC1285 /* KNImageCacheLogicTest */,
 			);
 		};
 /* End PBXProject section */
@@ -238,10 +314,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		13F886B41797B19400BC1285 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13F886C01797B19400BC1285 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		1392DB2D1796A8B000CF98BD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		13F886B51797B19400BC1285 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -261,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1319D54B1798DD0800030B02 /* NKImageCaches.m in Sources */,
 				1392DB1F1796A8AF00CF98BD /* main.m in Sources */,
 				1392DB231796A8AF00CF98BD /* AppDelegate.m in Sources */,
 			);
@@ -274,9 +372,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		13F886B21797B19400BC1285 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1319D54F1798DEAC00030B02 /* NKImageCaches.m in Sources */,
+				13F886C31797B19400BC1285 /* KNImageCacheLogicTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1319D54E1798DE9600030B02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1392DB0D1796A8AF00CF98BD /* KNImageCache */;
+			targetProxy = 1319D54D1798DE9600030B02 /* PBXContainerItemProxy */;
+		};
 		1392DB351796A8B000CF98BD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1392DB0D1796A8AF00CF98BD /* KNImageCache */;
@@ -297,6 +409,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				1392DB3A1796A8B000CF98BD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		13F886BE1797B19400BC1285 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13F886BF1797B19400BC1285 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -412,6 +532,36 @@
 			};
 			name = Release;
 		};
+		13F886C51797B19400BC1285 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KNImageCacheLogicTest/KNImageCacheLogicTest-Prefix.pch";
+				INFOPLIST_FILE = "KNImageCacheLogicTest/KNImageCacheLogicTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		13F886C61797B19400BC1285 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KNImageCacheLogicTest/KNImageCacheLogicTest-Prefix.pch";
+				INFOPLIST_FILE = "KNImageCacheLogicTest/KNImageCacheLogicTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -431,6 +581,7 @@
 				1392DB431796A8B000CF98BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1392DB441796A8B000CF98BD /* Build configuration list for PBXNativeTarget "KNImageCacheTests" */ = {
 			isa = XCConfigurationList;
@@ -439,6 +590,16 @@
 				1392DB461796A8B000CF98BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13F886C71797B19400BC1285 /* Build configuration list for PBXNativeTarget "KNImageCacheLogicTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13F886C51797B19400BC1285 /* Debug */,
+				13F886C61797B19400BC1285 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -117,6 +117,8 @@ static        NSString* kDefaultCacheName       = @"DownloadedBookCover";
     BOOL result =[fm createFileAtPath:filePath contents:aData attributes:nil];
     if (result) {
         [_cacheList addObject:key];
+        NSLog(@"store success");
+        _totalCachesCount = [_cacheList count];
     }
     return result;
 }
@@ -138,13 +140,18 @@ static        NSString* kDefaultCacheName       = @"DownloadedBookCover";
     return NO;
 }
 
-- (void)fetchRemoteImageWith:(NSString *)url
+- (void)fetchRemoteImageWith:(NSString *)url block:(cacheResultBlock )aBlock
 {
+    __block NKImageCaches *cache = self;
     NSURL *URL = [NSURL URLWithString:url];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NKImageCaches *blockInside = cache;
         NSData *data = [NSData dataWithContentsOfURL:URL];
         if (data) {
-            [[NKImageCaches sharedNKImageCache] storeData:data dataPath:url];
+            BOOL restult = [blockInside storeData:data dataPath:url];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                aBlock(restult);
+            });
         }
     });
 
@@ -178,7 +185,6 @@ static        NSString* kDefaultCacheName       = @"DownloadedBookCover";
     if (_cachePath) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             NSFileManager* fm = [NSFileManager defaultManager];
-            NSArray* paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
             NSArray *subPaths = [fm contentsOfDirectoryAtPath:_cachePath error:nil];
             for (NSString *name in subPaths) {
                 NSString *path = [_cachePath stringByAppendingPathComponent:name];
@@ -215,6 +221,8 @@ static        NSString* kDefaultCacheName       = @"DownloadedBookCover";
 	[self createPathIfNecessary:cachesPath];
 	[self createPathIfNecessary:cachePath];
 	
+    NSLog(@"ffff %@",cachePath);
+    
 	return cachePath;
 }
 

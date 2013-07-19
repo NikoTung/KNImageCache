@@ -12,6 +12,10 @@
 
 #import <Foundation/Foundation.h>
 
+
+typedef void (^cacheResultBlock)(BOOL result) ;
+
+
 @interface NKImageCaches : NSObject
 
 //the name of cache path :var://documents/name/
@@ -64,7 +68,7 @@
 
 
 //fetch a remote image from server ,if succeed cache it
-- (void)fetchRemoteImageWith:(NSString *)url;
+- (void)fetchRemoteImageWith:(NSString *)url block:(cacheResultBlock )aBlock;
 
 
 @end
