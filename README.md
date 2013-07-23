@@ -1,3 +1,4 @@
+
 KNImageCache
 ===========================
 
@@ -7,6 +8,8 @@ whether the image exist on the disk.
 
 Unlike other cache ,KNImageCache only caches the image's key not the image data in memory.When you detect that the image
 cached on disk,you can get the file path and request the image with the framework .
+
+Use the singleton for the whole app
 
  ARC Compatibility
 ===================
