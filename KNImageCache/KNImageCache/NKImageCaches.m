@@ -139,9 +139,10 @@ static        NSString* kDefaultCacheName       = @"DownloadedBookCover";
     return NO;
 }
 
-- (void)fetchRemoteImageWith:(NSString *)url block:(cacheResultBlock )aBlock
+- (void)fetchRemoteImageWith:(NSString *)url tag:(NSInteger )aTag block:(cacheResultBlock )aBlock
 {
     __block NKImageCaches *cache = self;
+    NSInteger tag = aTag;
     NSURL *URL = [NSURL URLWithString:url];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NKImageCaches *blockInside = cache;
@@ -149,7 +150,7 @@ static        NSString* kDefaultCacheName       = @"DownloadedBookCover";
         if (data) {
             BOOL restult = [blockInside storeData:data dataPath:url];
             dispatch_async(dispatch_get_main_queue(), ^{
-                aBlock(restult);
+                aBlock(restult,tag);
             });
         }
     });

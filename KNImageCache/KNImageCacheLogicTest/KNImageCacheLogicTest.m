@@ -53,8 +53,9 @@
     NSURL *url = [imageCache imageURLforPath:Test_URL];
     STAssertNil(url, @"should no image");
     
-    [imageCache fetchRemoteImageWith:Test_URL block:^(BOOL result) {
+    [imageCache fetchRemoteImageWith:Test_URL tag:10 block:^(BOOL result,NSInteger tag) {
         
+        STAssertEquals(10, tag, @"should be the same tag");
         CFRunLoopRef runloop = CFRunLoopGetCurrent();
         CFRunLoopStop(runloop);
     }];

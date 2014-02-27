@@ -13,7 +13,7 @@
 #import <Foundation/Foundation.h>
 
 
-typedef void (^cacheResultBlock)(BOOL result) ;
+typedef void (^cacheResultBlock)(BOOL result ,NSInteger tag) ;
 
 
 @interface NKImageCaches : NSObject
@@ -67,8 +67,13 @@ typedef void (^cacheResultBlock)(BOOL result) ;
 - (BOOL)removeImageForPath:(NSString *)aPath;
 
 
-//fetch a remote image from server ,if succeed cache it
-- (void)fetchRemoteImageWith:(NSString *)url block:(cacheResultBlock )aBlock;
+/*!
+ fetch a remote image from server ,if succeed cache it
+ @param url the url of remote image
+ @param tag the tag of the request for distiguish each block
+ @param aBlock complete block
+*/
+- (void)fetchRemoteImageWith:(NSString *)url tag:(NSInteger )aTag block:(cacheResultBlock )aBlock;
 
 
 @end
