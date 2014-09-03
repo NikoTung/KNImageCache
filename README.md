@@ -24,3 +24,5 @@ It is easy to use.
  - (BOOL)hasImageForPath:(NSString *)aPath;
  - (NSURL *)imageURLforPath:(NSString *)aPath;
  - (BOOL)storeImage:(UIImage *)aImage imagePath:(NSString *)aPath;
+
+
